@@ -1,0 +1,144 @@
+#portfolio {
+  background-image: url(../../../public/img/background2.jpg.crdownload);
+  background-size: cover;
+  padding: 50px 0;
+  .portfolio_row {
+    .portfolio_content {
+      animation: 1s ease 0s 1 normal none running slideInRight;
+    }
+    text-align: center;
+    padding: 50px 0;
+    .portfolio_title {
+      padding-bottom: 50px;
+      text-align: center;
+      font-size: 25px;
+      h1 {
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        color: white;
+      }
+      h1::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 40%;
+        background-color: #4facfe;
+        bottom: -18px;
+        right: 31%;
+        transition: 0.5s;
+      }
+      h1:hover {
+        cursor: pointer;
+        color: #4facfe;
+      }
+    }
+    .nav-tabs {
+      border: 1px solid #ffffff00;
+      button {
+        border: 1px solid #ffffff00;
+        color: white;
+        font-weight: 600;
+        font-size: 22px;
+        transition: all 0.5s;
+      }
+      button:hover {
+        border: 1px solid #00f2fe;
+        border-radius: 60px;
+      }
+      button.active {
+        padding: 10px 15px;
+        border-radius: 60px;
+        font-weight: 700;
+        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      }
+    }
+    .col__main .nav {
+      border: 1px solid #8080803b;
+      border-radius: 50px;
+    }
+    .about__wrapper .row {
+      padding-bottom: 120px;
+    }
+    .project_row {
+      display: flex;
+      padding-top: 50px;
+      .project_img {
+        width: 50%;
+        animation: rotate 5s linear 2s infinite alternate;
+        img {
+          width: 100%;
+          border-radius: 20px;
+          height: 420px;
+        }
+      }
+      .project_content {
+        text-align: start;
+        padding-left: 40px;
+        width: 50%;
+        h3 {
+          color: white;
+        }
+        p {
+          color: #b8b8b8;
+          font-size: 20px;
+          padding: 15px 0;
+        }
+        .project_tab {
+          color: white;
+          font-weight: 600;
+          font-size: 20px;
+        }
+        h4 {
+          color: white;
+          margin-top: 15px;
+          display: inline;
+          margin-right: 15px;
+        }
+        a {
+          text-decoration: none;
+          font-size: 24px;
+          color: #0ce7fe;
+        }
+      }
+    }
+    .tab-content {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .nav-item {
+    button {
+      font-size: 16px !important;
+    }
+  }
+  .project_row {
+    flex-direction: column;
+    .project_img {
+      width: 90% !important;
+      margin: 0 auto;
+      img {
+        height: 200px !important;
+      }
+    }
+    .project_content {
+      width: 100% !important;
+      padding-top: 20px;
+      padding: 0 !important;
+      h4 {
+        font-size: 15px !important;
+      }
+      a {
+        font-size: 15px !important;
+      }
+      p {
+        padding: 0 !important;
+      }
+      ul {
+        font-size: 15px !important;
+      }
+    }
+  }
+}

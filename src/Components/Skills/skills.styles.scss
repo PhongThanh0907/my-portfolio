@@ -1,0 +1,116 @@
+#skills {
+  background-image: url("../../../public/img/maxresdefault.jpg");
+  background-size: cover;
+  padding: 50px 0;
+  .skills_row {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    .skill_title {
+      padding-bottom: 10px;
+      text-align: center;
+      font-size: 25px;
+      h1 {
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        color: white;
+      }
+      h1::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 40%;
+        background-color: #4facfe;
+        bottom: -18px;
+        right: 31%;
+        transition: 0.5s;
+      }
+      h1:hover {
+        cursor: pointer;
+        color: #4facfe;
+      }
+    }
+    p {
+      margin: 30px 0;
+      font-size: 20px;
+      color: #b8b8b8;
+    }
+    .skill_slider {
+      padding: 50px 0;
+      .slider-mobile {
+        display: none;
+      }
+      .slider-tablet {
+        display: none;
+      }
+      .circle {
+      }
+      h3 {
+        width: 200px;
+        font-size: 20px;
+        padding: 60px 30px;
+        border: 10px solid #4facfe;
+        border-radius: 50%;
+        margin: 0 auto;
+        color: white;
+        animation-name: changeColorCircle;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        transition: all 0.5s;
+      }
+      h3:hover {
+        border: 10px solid #7fff00;
+        color: #7fff00;
+        padding: 60px 30px;
+        border-block: inherit;
+        box-shadow: 0 0 5px #adff2f, 0 0 25px #adff2f, 0 0 50px #adff2f,
+          0 0 200px #adff2f;
+        animation-name: out;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes changeColorCircle {
+  0% {
+    border: 10px solid #4facfe;
+  }
+  25% {
+    border: 10px solid #ff00ff;
+  }
+  50% {
+    border: 10px solid #adff2f;
+  }
+  75% {
+    border: 10px solid #ff0000;
+  }
+  100% {
+    border: 10px solid #ffff00;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .skill_slider {
+    .slider-mobile {
+      display: block !important;
+    }
+    .slider-option {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  .skill_slider {
+    .slider-tablet {
+      display: block !important;
+    }
+    .slider-option {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+#contact {
+  background-color: #1c1925;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  letter-spacing: 1.5px;
+  .contact_title {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+
+    h1 {
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      margin-bottom: 50px;
+    }
+    h1::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 30%;
+      background-color: #4facfe;
+      bottom: -18px;
+      right: 35%;
+      transition: 0.5s;
+    }
+    h1:hover {
+      cursor: pointer;
+      color: #4facfe;
+    }
+  }
+  .contact_content {
+    display: flex;
+    text-align: start;
+    .contact_info {
+      h2 {
+        margin-bottom: 30px;
+      }
+      span {
+        display: block;
+        padding: 15px 0;
+        .MuiSvgIcon-root {
+          margin-right: 20px;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+    .contact_form {
+      h2 {
+        margin-bottom: 30px;
+      }
+      label {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      button {
+        border-radius: 10px;
+        padding: 10px 60px;
+        background: linear-gradient(
+          to right,
+          #4facfe 0%,
+          #12e5fe 51%,
+          #00f2fe 100%
+        );
+        border: 1px solid transparent;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 20px;
+        background-size: 200%;
+        transition: all 0.5s ease-in-out;
+      }
+      button:hover {
+        background-position: right center;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .contact_content {
+    flex-direction: column;
+    span {
+      padding: 5px !important;
+    }
+  }
+  .contact_info {
+    padding-bottom: 20px;
+  }
+  .contact_form {
+    text-align: center;
+    button {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+}
