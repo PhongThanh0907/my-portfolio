@@ -10,18 +10,14 @@ const LenisProvider = ({ children }: { children: ReactNode }) => {
     if (!lenis) {
       return;
     }
-
     function update(data: { timestamp: number }) {
       const time = data.timestamp;
       lenisRef.current?.lenis?.raf(time);
     }
-
     frame.update(update, true);
-
     lenis.stop();
     lenis.start();
     lenis.scrollTo(0, { immediate: true });
-
     return () => cancelFrame(update);
   }, [lenis]);
 
